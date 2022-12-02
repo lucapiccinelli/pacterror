@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
+using consolex86;
 using PactNet;
 using Xunit;
 
@@ -34,14 +35,5 @@ public class PactTest
             string result = await MyService.GetAsync($"{context.MockServerUri}test");
             Assert.Equal("OK", result);
         });
-    }
-}
-
-public class MyService
-{
-    public static Task<string> GetAsync(string address)
-    {
-        HttpClient client = new HttpClient();
-        return client.GetAsync(address).Result.Content.ReadAsStringAsync();
     }
 }
