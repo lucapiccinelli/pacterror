@@ -1,0 +1,38 @@
+{
+  "consumer": {
+    "name": "G3p Token requestAPI Consumer"
+  },
+  "interactions": [
+    {
+      "description": "A GET request",
+      "providerStates": [
+        {
+          "name": "a get call"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/test"
+      },
+      "response": {
+        "body": "OK",
+        "headers": {
+          "Content-Type": "text/plain"
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pactRust": {
+      "ffi": "0.3.11",
+      "models": "0.4.5"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "G3p Token requestAPI Consumer"
+  }
+}
